@@ -2,7 +2,8 @@ let api_data = [],
     cases_list = [],
     recovered_list = [],
     deaths_list = [],
-    dates_list = [];
+    dates_list = [],
+    chart;
 
 window.addEventListener("load", () => {
     fetch(`https://api.covid19india.org/states_daily.json`)
@@ -44,13 +45,16 @@ let fetchData = function (stateCode) {
         dates_list.push(api_data.states_daily[index]['date'])
     }
 
-    //drawChart
+    //update daily values
 
-    let chart;
+    updateState(stateCode);
+
+    //drawChart
     console.log(`data stored in variables,`)
     function axesLinearChart() {
         if(chart){
-            chart.destroy();
+            chart.destroy()
+            console.log('chart destroyed')
         }
         chart = new Chart(ctx, {
             type: 'line',
@@ -102,6 +106,7 @@ let fetchData = function (stateCode) {
     }
     axesLinearChart();
     console.log('chart drawn')
+    console.log(typeof(chart))
 }
 
 

@@ -6,3 +6,9 @@ const new_recovered_element = document.querySelector(".recovered .new-value")
 const deaths_element = document.querySelector(".deaths .value")
 const new_deaths_element = document.querySelector(".deaths .new-value")
 const ctx = document.getElementById("axes_line_chart").getContext("2d")
+
+updateState = function (stateCode) {
+    console.log('app.js runned')
+    state_name_element.textContent = 'State'
+    console.log(stateCode)
+}
