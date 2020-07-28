@@ -89,7 +89,7 @@
     flex-wrap: wrap;
     align-content: flex-start;
 }
-.country,.total-cases,.recovered,.deaths{
+.state,.total-cases,.recovered,.deaths{
     height: 100px;
     padding: 10px;
 }
@@ -98,7 +98,7 @@
     font-size: 2.2em;
     font-weight: bold;
 }
-.change-country{
+.change-state{
     cursor: pointer;
 }
 .title{
@@ -126,7 +126,7 @@
     padding: 50px 0;
 }
 
-.search-country{
+.search-state{
     position: relative;
     top: 10px;
 }
@@ -155,7 +155,7 @@
     cursor: pointer;
     padding: 4px;
 }
-.country-list{
+.state-list{
     position: absolute;
     top: 30px;
     width: 270px;
@@ -166,38 +166,35 @@
     display: flex;
     justify-content: space-evenly;
 }
-/* .country-list ul{
-    
-} */
-.country-list ul li{
+.state-list ul li{
     list-style: none;
     cursor: pointer;
     padding:5px;
     color: #fff;
     margin-left:10px;
 }
-.country-list ul li:hover{
+.state-list ul li:hover{
     border-left: 1px solid #fff;
 }
 
 
 /* width */
-.country-list::-webkit-scrollbar {
+.state-list::-webkit-scrollbar {
     width: 10px;
   }
   
   /* Track */
-  .country-list::-webkit-scrollbar-track {
+  .state-list::-webkit-scrollbar-track {
     background: #111;
   }
   
   /* Handle */
-  .country-list::-webkit-scrollbar-thumb {
+  .state-list::-webkit-scrollbar-thumb {
     background: #888;
   }
   
   /* Handle on hover */
-  .country-list::-webkit-scrollbar-thumb:hover {
+  .state-list::-webkit-scrollbar-thumb:hover {
     background: #555;
   }
 
