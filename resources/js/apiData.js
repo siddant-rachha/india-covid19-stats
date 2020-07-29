@@ -5,7 +5,7 @@ let api_data = [],
     dates_list = [],
     chart;
 
-window.addEventListener("load", () => {
+let main = () => {
     fetch(`https://api.covid19india.org/states_daily.json`)
         .then(response => {
             console.log('api data received')
@@ -20,7 +20,7 @@ window.addEventListener("load", () => {
         .catch(error => {
             alert(error)
         })
-})
+}
 
 let fetchData = function (stateCode) {
 
@@ -106,7 +106,6 @@ let fetchData = function (stateCode) {
     }
     axesLinearChart();
     console.log('chart drawn')
-    console.log(typeof(chart))
 }
 
 
