@@ -21,10 +21,10 @@ liveStateData = (shortStateCode) => {
             console.log(stateliveData)
         })
         .then(response=>{
-            total_cases_element.textContent = stateliveData.confirmed
-            recovered_element.textContent = stateliveData.recovered
-            deaths_element.textContent = stateliveData.deceased
-            total_tested_element.textContent = stateliveData.tested
+            total_cases_element.textContent = stateliveData.confirmed.toLocaleString()
+            recovered_element.textContent = stateliveData.recovered.toLocaleString()
+            deaths_element.textContent = stateliveData.deceased.toLocaleString()
+            total_tested_element.textContent = stateliveData.tested.toLocaleString()
 
         })
         .catch(err => {

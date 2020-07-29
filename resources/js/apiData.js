@@ -3,8 +3,10 @@ let api_data = [],
     recovered_list = [],
     deaths_list = [],
     dates_list = [],
-    chart;
-const ctx = document.getElementById("axes_line_chart").getContext("2d")
+    chart1,chart2,chart3;
+const ctx1 = document.getElementById("axes_line_chart1").getContext("2d")
+const ctx2 = document.getElementById("axes_line_chart2").getContext("2d")
+const ctx3 = document.getElementById("axes_line_chart3").getContext("2d")
 
 let main = () => {
     shortStateCode = shortStateCode.toLowerCase()
@@ -16,6 +18,7 @@ let main = () => {
         })
         .then(response => {
             api_data = response
+            console.log(api_data)
         })
         .then(response => {
             fetchData(shortStateCode)
@@ -61,12 +64,24 @@ let fetchData = function (shortStateCode) {
     //drawChart
     console.log(`data stored in variables,`)
     function axesLinearChart() {
-        if (chart) {
-            chart.destroy()
+        if (chart1) {
+            chart1.destroy()
             console.log('chart destroyed')
         }
-        chart = new Chart(ctx, {
-            type: 'line',
+        if (chart2) {
+            chart2.destroy()
+            console.log('chart destroyed')
+        }
+        if (chart3) {
+            chart3.destroy()
+            console.log('chart destroyed')
+        }
+
+
+
+
+        chart1 = new Chart(ctx1, {
+            type: 'bar',
             data: {
                 datasets: [{
                     label: 'Daily New Cases',
@@ -78,27 +93,28 @@ let fetchData = function (shortStateCode) {
                     pointRadius: 1,
 
                 },
-                {
-                    label: 'Daily New Recovered',
-                    data: recovered_list,
-                    fill: false,
-                    borderColor: '#009688',
-                    backgroundColor: '#009688',
-                    borderWidth: 1,
-                    pointRadius: 1,
+                // {
+                //     label: 'Daily New Recovered',
+                //     data: recovered_list,
+                //     fill: false,
+                //     borderColor: '#009688',
+                //     backgroundColor: '#009688',
+                //     borderWidth: 1,
+                //     pointRadius: 1,
 
-                },
-                {
-                    label: 'Daily New Deaths',
-                    data: deaths_list,
-                    fill: false,
-                    borderColor: '#f44336',
-                    backgroundColor: '#f44336',
-                    borderWidth: 1,
-                    borderWidth: 1,
-                    pointRadius: 1,
+                // },
+                // {
+                //     label: 'Daily New Deaths',
+                //     data: deaths_list,
+                //     fill: false,
+                //     borderColor: '#f44336',
+                //     backgroundColor: '#f44336',
+                //     borderWidth: 1,
+                //     borderWidth: 1,
+                //     pointRadius: 1,
 
-                }],
+                // }
+            ],
                 labels: dates_list
             },
             options: {
@@ -111,6 +127,83 @@ let fetchData = function (shortStateCode) {
                 maintainAspectRatio: false
             }
         });
+
+
+
+
+
+
+
+
+
+
+
+        chart2 = new Chart(ctx2, {
+            type: 'bar',
+            data: {
+                datasets: [
+                {
+                    label: 'Daily New Recovered',
+                    data: recovered_list,
+                    fill: false,
+                    borderColor: '#009688',
+                    backgroundColor: '#009688',
+                    borderWidth: 1,
+                    pointRadius: 1,
+
+                },
+
+            ],
+                labels: dates_list
+            },
+            options: {
+                legend: {
+                    labels: {
+                        fontColor: '#fff'
+                    }
+                },
+                responsive: true,
+                maintainAspectRatio: false
+            }
+        })
+
+
+
+
+
+
+        chart3 = new Chart(ctx3, {
+            type: 'bar',
+            data: {
+                datasets: [
+                {
+                    label: 'Daily New Deaths',
+                    data: deaths_list,
+                    fill: false,
+                    borderColor: '#f44336',
+                    backgroundColor: '#f44336',
+                    borderWidth: 1,
+                    borderWidth: 1,
+                    pointRadius: 1,
+
+                }
+            ],
+                labels: dates_list
+            },
+            options: {
+                legend: {
+                    labels: {
+                        fontColor: '#fff'
+                    }
+                },
+                responsive: true,
+                maintainAspectRatio: false
+            }
+        })
+
+
+
+
 
     }
     axesLinearChart();
