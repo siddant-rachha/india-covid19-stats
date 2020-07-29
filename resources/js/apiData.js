@@ -87,7 +87,7 @@ let fetchData = function (stateCode) {
                     backgroundColor: '#f44336',
                     borderWidth: 1,
                     borderWidth: 1,
-                    pointRadius: 1,
+                    pointRadius: 2,
 
                 }],
                 labels: dates_list
