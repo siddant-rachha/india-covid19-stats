@@ -37,3 +37,5 @@ let state_list = [
     { name: 'Lakshadweep', code: 'LD' },
     { name: 'Puducherry', code: 'PY' }
 ];
+
+console.log('stateList runned')
