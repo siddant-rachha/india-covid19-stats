@@ -66,7 +66,7 @@ let fetchData = function (stateCode) {
                     borderColor: '#fff',
                     backgroundColor: '#fff',
                     borderWidth: 1,
-                    pointRadius: 1,
+                    pointRadius: 2,
 
                 },
                 {
@@ -76,7 +76,7 @@ let fetchData = function (stateCode) {
                     borderColor: '#009688',
                     backgroundColor: '#009688',
                     borderWidth: 1,
-                    pointRadius: 1,
+                    pointRadius: 2,
 
                 },
                 {
