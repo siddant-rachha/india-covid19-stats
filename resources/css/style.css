@@ -24,12 +24,41 @@
         opacity: 1;
     }
 }
+.india-stats{
+    padding: 8px 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 12px;
+}
+.india{
+    color: #6a149b;
+    font-size: 14px;
+}
+.india-recovered{
+    color: #009688;
+}
+.india-deaths{
+    color: #f44336;
+}
+.india-cases{
+    color: blue;
+}
+.india-tested{
+    color: blue;
+}
+.india-value{
+     display: flex;
+     justify-content: center;
+}
+
 .header{
     display: flex;
     align-items: center;
     max-width: 1200px;
     width: 100%;
-    background-color: #f3f2f2;
+    background-color: rgb(250, 250, 250);
     margin: 0 auto;
     justify-content: space-between;
 
@@ -231,19 +260,22 @@
 }
 .footer-container p,.footer-container a{
    color: #fff; 
-   text-decoration: none;
+}
+.footer-container a{
+    font-size: 10px;
 }
 .footer-container .link {
     display: flex;
     align-items: center;
 }
 
-.footer-container .link p{
+.link {
+    display: flex;
     font-size: 12px;
+    align-items: unset;
 }
 
-.link img{
+.footer-container img{
     width: 20px;
-    margin-left: 10px;
     border-radius: 7px;
 }
