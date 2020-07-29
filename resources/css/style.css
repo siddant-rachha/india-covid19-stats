@@ -90,7 +90,7 @@
     align-content: flex-start;
 }
 .state,.total-cases,.recovered,.deaths{
-    height: 100px;
+    height: 120px;
     padding: 10px;
 }
 .name{
@@ -100,6 +100,7 @@
 }
 .change-state{
     cursor: pointer;
+    margin-bottom: 10px; 
 }
 .title{
     font-size: 1.3em;
