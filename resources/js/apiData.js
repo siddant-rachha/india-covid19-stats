@@ -4,8 +4,11 @@ let api_data = [],
     deaths_list = [],
     dates_list = [],
     chart;
+const ctx = document.getElementById("axes_line_chart").getContext("2d")
 
 let main = () => {
+    shortStateCode = shortStateCode.toLowerCase()
+
     fetch(`https://api.covid19india.org/states_daily.json`)
         .then(response => {
             console.log('api data received')
@@ -22,24 +25,30 @@ let main = () => {
         })
 }
 
-let fetchData = function (stateCode) {
+let fetchData = function (shortStateCode) {
+
+    updateState(shortStateCode);
+    console.log(`check here: ${shortStateCode}`)
+
+    liveStateData(shortStateCode);
 
     let cases_list = [],
         recovered_list = [],
         deaths_list = [],
         dates_list = [];
 
-    stateCode = stateCode.toLowerCase()
-    console.log(`stateCode : ${stateCode}`)
+    shortStateCode = shortStateCode.toLowerCase()
+    console.log(`shortStateCode : ${shortStateCode}`)
     lengthofData = api_data.states_daily.length;
+    console.log(lengthofData / 3)
     for (let index = 0; index < lengthofData; index += 3) {
-        cases_list.push(api_data.states_daily[index][stateCode])
+        cases_list.push(api_data.states_daily[index][shortStateCode])
     }
     for (let index = 1; index < lengthofData; index += 3) {
-        recovered_list.push(api_data.states_daily[index][stateCode])
+        recovered_list.push(api_data.states_daily[index][shortStateCode])
     }
     for (let index = 2; index < lengthofData; index += 3) {
-        deaths_list.push(api_data.states_daily[index][stateCode])
+        deaths_list.push(api_data.states_daily[index][shortStateCode])
     }
     for (let index = 0; index < lengthofData; index += 3) {
         dates_list.push(api_data.states_daily[index]['date'])
@@ -47,12 +56,12 @@ let fetchData = function (stateCode) {
 
     //update daily values
 
-    updateState(stateCode);
+
 
     //drawChart
     console.log(`data stored in variables,`)
     function axesLinearChart() {
-        if(chart){
+        if (chart) {
             chart.destroy()
             console.log('chart destroyed')
         }
@@ -93,16 +102,16 @@ let fetchData = function (stateCode) {
                 labels: dates_list
             },
             options: {
-                legend:{
-                    labels:{
-                    fontColor: '#fff'
+                legend: {
+                    labels: {
+                        fontColor: '#fff'
                     }
                 },
                 responsive: true,
                 maintainAspectRatio: false
             }
         });
-        
+
     }
     axesLinearChart();
     console.log('chart drawn')

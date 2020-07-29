@@ -89,7 +89,7 @@
     flex-wrap: wrap;
     align-content: flex-start;
 }
-.state,.total-cases,.recovered,.deaths{
+.state,.total-cases,.recovered,.deaths,.total-tested{
     height: 120px;
     padding: 10px;
 }
@@ -109,6 +109,10 @@
     font-size: 2em;
     font-weight: bold;
 }
+.total-tested .value {
+    font-size: 2em;
+    font-weight: bold;
+}
 .recovered .value {
     font-size: 2em;
     font-weight: bold;
@@ -120,7 +124,7 @@
     color: #f44336;
 }
 .chart{
-    width: 80%;
+    width: 90%;
     height: 70vh;
     min-height: 500px;
     margin: 0 auto;
@@ -129,7 +133,7 @@
 
 @media screen and (max-width:500px){
     .chart{
-        width: 95%;
+        width: 97%;
     }
 }
 
@@ -204,8 +208,6 @@
   .state-list::-webkit-scrollbar-thumb:hover {
     background: #555;
   }
-
-
 
 .footer{
     -webkit-user-select: none;
