@@ -66,7 +66,7 @@ let fetchData = function (stateCode) {
                     borderColor: '#fff',
                     backgroundColor: '#fff',
                     borderWidth: 1,
-                    pointRadius: 2,
+                    pointRadius: 1,
 
                 },
                 {
@@ -76,7 +76,7 @@ let fetchData = function (stateCode) {
                     borderColor: '#009688',
                     backgroundColor: '#009688',
                     borderWidth: 1,
-                    pointRadius: 2,
+                    pointRadius: 1,
 
                 },
                 {
@@ -87,7 +87,7 @@ let fetchData = function (stateCode) {
                     backgroundColor: '#f44336',
                     borderWidth: 1,
                     borderWidth: 1,
-                    pointRadius: 2,
+                    pointRadius: 1,
 
                 }],
                 labels: dates_list
