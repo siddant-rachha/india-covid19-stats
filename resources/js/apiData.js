@@ -57,7 +57,6 @@ let fetchData = function (shortStateCode) {
         dates_list.push(api_data.states_daily[index]['date'])
     }
 
-    //update daily values
 
 
 
@@ -78,8 +77,6 @@ let fetchData = function (shortStateCode) {
         }
 
 
-
-
         chart1 = new Chart(ctx1, {
             type: 'bar',
             data: {
@@ -93,27 +90,6 @@ let fetchData = function (shortStateCode) {
                     pointRadius: 1,
 
                 },
-                // {
-                //     label: 'Daily New Recovered',
-                //     data: recovered_list,
-                //     fill: false,
-                //     borderColor: '#009688',
-                //     backgroundColor: '#009688',
-                //     borderWidth: 1,
-                //     pointRadius: 1,
-
-                // },
-                // {
-                //     label: 'Daily New Deaths',
-                //     data: deaths_list,
-                //     fill: false,
-                //     borderColor: '#f44336',
-                //     backgroundColor: '#f44336',
-                //     borderWidth: 1,
-                //     borderWidth: 1,
-                //     pointRadius: 1,
-
-                // }
             ],
                 labels: dates_list
             },
@@ -127,14 +103,6 @@ let fetchData = function (shortStateCode) {
                 maintainAspectRatio: false
             }
         });
-
-
-
-
-
-
-
-
 
 
 
@@ -168,10 +136,6 @@ let fetchData = function (shortStateCode) {
         })
 
 
-
-
-
-
         chart3 = new Chart(ctx3, {
             type: 'bar',
             data: {
@@ -202,10 +166,9 @@ let fetchData = function (shortStateCode) {
         })
 
 
-
-
-
     }
+
+    
     axesLinearChart();
     console.log('chart drawn')
 }

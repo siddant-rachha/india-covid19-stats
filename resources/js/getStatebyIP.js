@@ -1,8 +1,6 @@
 let shortStateCode;
 let _country;
 
-//this function determines the user's current living State by IP location
-
 window.addEventListener("load", () => {
     fetch("https://find-any-ip-address-or-domain-location-world-wide.p.rapidapi.com/iplocation?apikey=873dbe322aea47f89dcf729dcc8f60e8", {
         "method": "GET",

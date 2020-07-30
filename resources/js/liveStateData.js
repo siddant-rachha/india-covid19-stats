@@ -6,7 +6,6 @@ const deaths_element = document.querySelector(".deaths .value")
 const india_cases = document.querySelector(".india-cases .india-value")
 const india_recovered = document.querySelector(".india-recovered .india-value")
 const india_deaths = document.querySelector(".india-deaths .india-value")
-const india_tested = document.querySelector(".india-tested .india-value")
 
 
 fetch("https://covid-19-data.p.rapidapi.com/country?format=json&name=india", {
