@@ -189,8 +189,8 @@
 }
 
 @media screen and (max-width:500px) {
-    ..chart1, .chart2, .chart3 {
-        width: 97%;
+    .chart1, .chart2, .chart3 {
+        width: 98%;
     }
 }
 
