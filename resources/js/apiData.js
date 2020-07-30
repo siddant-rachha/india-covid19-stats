@@ -76,7 +76,6 @@ let fetchData = function (shortStateCode) {
             console.log('chart destroyed')
         }
 
-
         chart1 = new Chart(ctx1, {
             type: 'bar',
             data: {

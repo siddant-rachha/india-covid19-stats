@@ -33,7 +33,7 @@ let state_list = [
     { name: 'Delhi', code: 'DL' },
     { name: 'Jammu and Kashmir', code: 'JK' },
     { name: 'Ladakh', code: 'LA' },
-    { name: 'Lakshadweep', code: 'LD' },
+    // { name: 'Lakshadweep', code: 'LD' }, no data from api 
     { name: 'Puducherry', code: 'PY' }
 ];
 

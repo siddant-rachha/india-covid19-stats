@@ -6,5 +6,4 @@ updateState = function (stateCode) {
         }
         
     });
-    console.log(stateCode)
 }
