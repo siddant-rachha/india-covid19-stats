@@ -182,15 +182,15 @@
 }
 
 .chart1, .chart2, .chart3 {
-    width: 98%;
+    width: 80%;
     height: 70vh;
     margin: 0 auto;
     padding: 20px 0;
 }
 
 @media screen and (max-width:500px) {
-    .chart {
-        width: 96%;
+    ..chart1, .chart2, .chart3 {
+        width: 97%;
     }
 }
 
