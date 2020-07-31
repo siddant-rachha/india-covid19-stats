@@ -17,7 +17,7 @@ let main = () => {
             return response.json()
         })
         .then(response => {
-            response.splice(0,51)//takes data from 1 april
+            response.states_daily.splice(0,51)//takes data from 1 april
             api_data = response
             console.log(api_data)
         })
