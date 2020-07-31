@@ -17,6 +17,7 @@ let main = () => {
             return response.json()
         })
         .then(response => {
+            response.states_daily = response.states_daily.splice(0, 51) // removes 17 api data elements actually
             api_data = response
             console.log(api_data)
         })
