@@ -12,7 +12,9 @@ fetch("https://covid-19-data.p.rapidapi.com/country?format=json&name=india", {
 	"method": "GET",
 	"headers": {
 		"x-rapidapi-host": "covid-19-data.p.rapidapi.com",
-		"x-rapidapi-key": "4db143a0d2msh5c29b3c778a0ca5p1a0766jsn8c479a5cfe1f"
+		"x-rapidapi-key": "4db143a0d2msh5c29b3c778a0ca5p1a0766jsn8c479a5cfe1f",
+		"Content-Type":"application/json",
+                    "Access-Control-Allow-Origin":"*",
 	}
 })
 .then(response => {
